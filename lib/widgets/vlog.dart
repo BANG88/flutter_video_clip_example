@@ -19,7 +19,7 @@ class _VlogWidgetState extends State<VlogWidget> {
       child: Column(
         children: <Widget>[
           Text(
-            '制作专属于你的Vlog',
+            '制作专属于你的 Vlog',
             style: theme.primaryTextTheme.title.merge(
               TextStyle(
                 color: Colors.black,
