@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:video_clip/widgets/carousel.dart';
+import 'package:video_clip/widgets/vlog.dart';
 
 class Film {
   final String url;
@@ -131,6 +132,9 @@ class DiscoverPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 color: backgroundColor,
+                padding: EdgeInsets.only(
+                  top: 26,
+                ),
                 child: ListView(
                   key: PageStorageKey('discover'),
                   children: [
@@ -269,10 +273,10 @@ class DiscoverPage extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             padding: EdgeInsets.only(
-                              top: 30,
+                              top: 36,
                               left: 24,
                               right: 24,
-                              bottom: 10,
+                              bottom: 16,
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -306,6 +310,7 @@ class DiscoverPage extends StatelessWidget {
                             ),
                           ),
                           CarouselWidget(),
+                          VlogWidget()
                         ],
                       ),
                     )

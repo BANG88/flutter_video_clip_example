@@ -26,22 +26,22 @@ class _CarouselWidgetState extends State<CarouselWidget> {
     {
       'title': '延时摄影火热征稿',
       'url':
-          'https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=750&h=360'
+          'https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=750&h=260'
     },
     {
       'title': '延时摄影火热征稿',
       'url':
-          'https://images.pexels.com/photos/1538852/pexels-photo-1538852.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=640&h=260'
+          'https://images.pexels.com/photos/2893960/pexels-photo-2893960.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=750&h=260'
     },
     {
       'title': '延时摄影火热征稿',
       'url':
-          'https://images.pexels.com/photos/1538852/pexels-photo-1538852.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=640&h=260'
+          'https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=750&h=260'
     },
     {
-      'title': '延时摄影火热征稿',
+      'title': 'Two person jumping on brown soil',
       'url':
-          'https://images.pexels.com/photos/1538852/pexels-photo-1538852.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=640&h=260'
+          'https://images.pexels.com/photos/2480524/pexels-photo-2480524.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=750&h=260'
     },
   ];
   @override
@@ -59,14 +59,14 @@ class _CarouselWidgetState extends State<CarouselWidget> {
                   Image.network(
                     l['url'],
                     width: double.infinity,
-                    height: 180,
+                    height: 160,
                     fit: BoxFit.cover,
                   ),
                   Positioned(
                     bottom: 26.0,
                     left: 15.0,
                     child: Text(
-                      "${l['title']}${index + 1}",
+                      "${l['title']}",
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -77,9 +77,11 @@ class _CarouselWidgetState extends State<CarouselWidget> {
             ),
           ),
         ),
-        // autoPlay: true,
+        autoPlay: true,
+        autoPlayAnimationDuration: const Duration(seconds: 3),
+        autoPlayInterval: const Duration(seconds: 6),
         viewportFraction: 1.0,
-        // aspectRatio: MediaQuery.of(context).size.aspectRatio,
+        height: 160,
         onPageChanged: (index) {
           setState(() {
             _current = index;
